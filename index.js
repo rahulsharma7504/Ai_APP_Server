@@ -17,7 +17,9 @@ const authRoute = require("./routes/authRoute");
 const adminRoute = require("./routes/adminRoute");
 const chatRoute = require("./routes/chatRoute");
 const router = require("./routes/router");
-
+app.get('/', (req, res) => {
+    res.send("Hello World");
+});
 app.use('/api', authRoute);
 app.use('/api', chatRoute);
 app.use('/api/admin', adminRoute);
